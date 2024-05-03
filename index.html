@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olivia Choi</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png">
+</head>
+
+<body>
+
+    <!-- header area -->
+    <header id="header">
+        <div class="row m-0">
+            <div class="col-3 bgcolor-black">
+                <nav class="primary-nav navbar-expand-md">
+                    <div class="site-title text-center text-light py-5">
+                        <a href="#" class="navbar-brand font-staat font-size-40">Olivia</a>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <a href="#home" class="nav-item nav-link text-white-50 font-os font-size-16 active">Home</a>
+                        <a href="#about_me"
+                            class="nav-item nav-link text-white-50 font-os font-size-16 active">About</a>
+                        <a href="#awards"
+                            class="nav-item nav-link text-white-50 font-os font-size-16 active">Achievements</a>
+                        <a href="#portfolio"
+                            class="nav-item nav-link text-white-50 font-os font-size-16 active">Portfolio</a>
+                        <div class="counter-number nav-item nav-link text-white-50 font-os font-size-16 active">Counting Views...</div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <button class="toggle-button"><span class="fas fa-bars fa-2x"></span></button>
+    </header>
+    <!-- #header area -->
+
+    <main id="site-main">
+        <div class="row m-0">
+            <div class="col-md-9 offset-md-3 px-0">
+
+                <!-- site-banner area -->
+                <section class="site-banner bg-light" id="home">
+                    <div class="banner-area">
+                        <div class="author text-center">
+                            <div class="author-img">
+                                <img src="./assets/author_image2.png" width="185" height="205">
+                            </div>
+                            <h1 class="text-black font-staat font-size-40 text-uppercase py-3">Olivia Choi</h1>
+                            <h5 class="text-black font-ram font-size-27">I'm a <span id="typed"></span></h5>
+                        </div>
+                    </div>
+                </section>
+                <!-- #site-banner area -->
+
+                <!-- about me area -->
+                <section class="about px-4 my-5" id="about_me">
+                    <div class="me py-5">
+                        <h5 class="text-uppercase font-os font-size-16 text-muted">information</h5>
+                        <h1 class="text-uppercase font-staat font-size-34">About Me</h1>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-sm-3 pl-0">
+                            <img src="./assets/author_image.png" width="220" height="220" alt="profile image" class="img-fluid">
+                        </div>
+                        <div class="col-sm-9">
+                            <h6 class="text-uppercase font-os font-size-16 text-muted">About Me</h6>
+                            <h5 class="font-ram font-size-20 py-2">I'm Olivia Choi & a <span id="typed_2"></span></h5>
+                            <p class="font-ram text-black-50 py-2">
+                                I'm a passionate computer science student based in BC, Canada, 
+								currently pursuing a BSc degree in University of Victoria.
+								I am deeply committed to exploring the technology, particulary in <b><font color="orange">Cloud</font></b> and <b><font color="orange">DevOps</font></b>.<br><br>
+								Throughout my academic and professional journey, I have engaged in a variety of impactful projects and roles:<br><br>
+								☑︎ Developed a chatbot powered by Amazon Bedrock (Python, Streamlit, AWS Lambda)<br><br>
+								☑︎ Designed 'ElectrIQ' mobile app for a Schneider Electric project (Figma)<br><br>
+								☑︎ UNESCO-UNITWIN Digital Education Assistant in Indonesia (TypeScript, React)<br><br>
+								☑︎ Currently working on 'Docker Essentials: A Guide for Developers' document<br><br>
+								I am eager to learn new technology and apply my knowledge and problem-solving skills
+								in a dynamic environment, aiming to contribute to and lead innovative projects that make a difference.
+								Outside of technology, I find joy in photography and choreography.
+                            </p>
+                            
+                            <button type="submit" onclick="window.open('/assets/OLIVIA CHOI_Resume_2024.pdf')"
+                                class="btn btn-dark text-uppercase mr-3">Download Resume</button>
+                        </div>
+                    </div>
+                </section>
+                <!-- #about me area -->
+
+                <!-- ability -->
+                <section class="skill px-4 py-5 bg-light" id="services">
+                    <div class="ability py-3">
+                        <h5 class="text-uppercase font-os font-size-16 text-muted">Ability</h5>
+                        <h1 class="text-uppercase font-staat font-size-34">My skills</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10 pl-4">
+                            <p class="font-ram font-size-16 text-black-50 pb-3">
+                                <span style="color:rgb(68, 61, 61);"><strong>· Languages :</strong></span> Python, R, C, Java, HTML/CSS, JavaScript, TypeScript, Assembly<br>
+
+                                <!-- <span style="color:rgb(68, 61, 61);"><strong>· Databases :</strong></span>  ElasticSearch, AWS DynamoDB, SQL(XAMPP)<br>
+                                <span style="color:rgb(68, 61, 61);"><strong>· Cloud Service:</strong></span>  AWS - EC2, Lambda, S3, SNS, DynamoDB, Route53, CloudFront, Alexa<br>
+                                <span style="color:rgb(68, 61, 61);"><strong>· IaC :</strong></span>  Terraform<br>
+                                <span style="color:rgb(68, 61, 61);"><strong>· Tool :</strong></span>  Git, Github, Github Action<br>                                    
+                                <span style="color:rgb(68, 61, 61);"><strong>· Front :</strong></span> Streamlit, Slack, Shopify<br>
+                                <span style="color:rgb(68, 61, 61);"><strong>· AI :</strong></span>  OpenAI(Chatpt), Langchain, Llama Index, Naver Clova OCR<br>
+                                <span style="color:rgb(68, 61, 61);"><strong>· UI/UX :</strong></span>  Canva, Figma, Dora AI<br>
+                                <span style="color:rgb(68, 61, 61);"><strong>· IDEs :</strong></span>  Visual Studio Code, AWS Cloud9 IDE, Xcode<br> -->
+
+                                <span style="color:rgb(68, 61, 61);"><strong>· Software:</strong></span>AWS, Streamlit, React Native, Figma, Dialogflow<br>
+                                <span style="color:rgb(68, 61, 61);"><strong>· DevOps:</strong></span>  Git, GitHub, Docker, Slack<br>
+                                <span style="color:rgb(68, 61, 61);"><strong>· AI :</strong></span> Amazon Bedrock, OpenAI<br>     
+                                
+                                <br>
+                            </p>
+                        </div>
+                </section>
+                <!-- #ability -->
+
+
+                <!-- awards -->
+                <section class="awards px-4 py-5" id="awards">
+                    <div class="do py-5">
+                        <h5 class="text-uppercase font-os font-size-16 text-muted">What I have achieved</h5>
+                        <h1 class="text-uppercase font-staat font-size-34"><i class="fas fa-award"></i> Awards &amp;
+                            Certifications</h1>
+                    </div>
+                    <div class="w-100">
+
+                        <ul class="fa-ul mb-0 font-ram font-size-16 text-black-50 pb-3">
+                            <li>
+                                <i class="fa-li fa fa-certificate text-warning"></i>
+                                AWS Certified Cloud Practitioner
+                            </li>
+                            <br>
+                            <li>
+                                <i class="fa-li fa fa-trophy text-warning"></i>
+                                UVic GDSC Hack4Everyone 2024 - Impact Winner
+                            </li>
+                            <li>
+                                <i class="fa-li fa fa-trophy text-warning"></i>
+                                SMWU App service planning & Design Competition - 2nd Prize
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!--<div class="row">
+                        <div class="col-md-4 col-sm-6 mb-4 text-center">
+                            <div class="panel border p-4">
+                                <span class="icon text-secondary"><i class="fas fa-directions fa-3x"></i></span>
+                                <h4 class="font-ram py-4">Art Direction</h4>
+                                <p class="font-ram font-size-16 text-black-50">
+                                    Fusce suscipit, ante a hendrerit thelery ullamcorper, risus nisl cursus purus the
+                                    viverra ante nulla vel justo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section> -->
+                <!-- #services -->
+
+                <!-- work -->
+                <section class="work py-5 px-4 bg-light" id="portfolio">
+                    <div class="py-3">
+                        <h5 class="text-uppercase font-os font-size-16 text-muted">Porfolio</h5>
+                        <h1 class="text-uppercase font-staat font-size-34">Projects</h1>
+                    </div>
+                    <div class="row">
+                        <div class="frame col-xs-6"></div>
+                        <div class="frame col-sm-4 pb-4" style="display: flex; justify-content: center; align-items: center;">
+                            <img src="./assets/portfolio/awscloudresumechallenge.png" title="awscloudresumechallenge"
+                                    alt="work1" class="img-fluid">
+                            <div class="details" style="display: flex; justify-content: center; align-items: center;">
+                                <p>Aws Cloud Resume Challenge<br><br>
+                                <a href="https://github.com/oliviachoiii/aws-cloud-resume-challenge" title="Source Code"><i
+                                            class="fab fa-github-square giti"></i></a></p>
+                            </div>
+                        </div>
+                        <div class="frame col-sm-4 pb-4">
+                            <img src="./assets/portfolio/streamlitchatbot.png" title="streamlitchatbot" alt="work1" class="img-fluid">
+                            <div class="details" style="display: flex; justify-content: center; align-items: center;">
+                                <p>Streamlit Chatbot with Amazon Bedrock<br><br>
+                                <a href="https://github.com/oliviachoiii/streamlit-chatbot-bedrock" title="Source Code"><i
+                                            class="fab fa-github-square giti"></i></a></p>
+                            </div>
+                        </div>
+                        <div class="frame col-sm-4 pb-4">
+                            <img src="./assets/portfolio/electriq.png" alt="work1" title="electriq" class="img-fluid">
+                            <div class="details" style="display: flex; justify-content: center; align-items: center;">
+                                <p>ElectrIQ<br>Schneider Electric WEST Project<br><br>
+                                <a href="https://www.figma.com/file/nupUdOatOrHn23LR3ni8ew/Schneider-Prototype?type=design&node-id=39%3A473&mode=design&t=BRjkZwT96oAlo9pC-1" title="Prototype"><i
+                                            class="fab fa-brands fa-figma fa-3x" style="color: #FFFFFF;"></i></a></p>
+                            </div>
+                        </div>
+                        <div class="frame col-sm-4 pb-4">
+                            <img src="./assets/portfolio/inclusicampus.png" alt="work1" title="inclusicampus" class="img-fluid"></a>
+                            <div class="details" style="display: flex; justify-content: center; align-items: center;">
+                                <p>InclusiCampus<br>UVic GDSC Hack4Everyone 2024 - Impact Winner<br><br>
+                                <a href="https://github.com/oliviachoiii/InclusiCampus" title="Source Code"><i
+                                            class="fab fa-github-square giti"></i></a></p>
+                            </div>
+                        </div>
+                        <div class="frame col-sm-4 pb-4">
+                            <img src="./assets/portfolio/unescounitwin.png" title="UNESCO-UNITWIN" alt="work1" class="img-fluid">
+                            <div class="details" style="display: flex; justify-content: center; align-items: center;">
+                                <p>UNESCO-UNITWIN<br><br>
+                                <a href="https://github.com/oliviachoiii/UNESCO-UNITWIN" title="Source Code"><i
+                                            class="fab fa-github-square giti"></i></a></p>
+                            </div>
+                        </div>
+                        <div class="frame col-sm-4 pb-4">
+                            <img src="./assets/portfolio/planted..png" alt="work1" title="Git-Fetch App" class="img-fluid">
+                            <div class="details" style="display: flex; justify-content: center; align-items: center;">
+                                <p>Planted.<br>SMWU App service planning & Design Competition - 2nd Prize<br><br>
+                                <a href="https://www.figma.com/file/K1y0vbYrdoOYzorNkpkgf3/footprint?type=design&node-id=288%3A1010&mode=design&t=qNYuphkBouBrX33G-1" title="Prototype"><i
+                                        class="fab fa-brands fa-figma fa-3x" style="color: #FFFFFF;"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- #work -->
+
+
+                <!--footer-->
+                <footer id="footer" class="pt-5 px-3">
+                    <div id="contact_us">
+                        <div class="row bg-light py-5">
+                            <div class="col-sm-4 my-5 text-center">
+                                <h6 class="font-ram font-size-16 text-black-50">&copy;2024 Olivia Choi. All rights reserved
+                                </h6>
+                            </div>
+                            <div class="col-sm-4 my-4 text-center">
+                                <div class="footer-title">
+                                    <p class="description font-os font-size-16 text-black-50 text-uppercase">Made with ❤
+                                    </p>
+                                </div>
+                                <div class="counter-number">Views</div>
+                            </div>
+                            <div class="social-icons col-sm-4 my-4 text-center">
+                                <a href="https://www.linkedin.com/in/oliviachoi612/" target="blank">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://github.com/oliviachoiii" target="blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+        integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+
+    <script src="./vendor/typed/typed.min.js"></script>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
