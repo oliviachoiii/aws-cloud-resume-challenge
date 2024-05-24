@@ -10,11 +10,11 @@ jobs:
   deploy:
     runs-on: macos-latest
     steps:
-    -name: Checkout repository
-     uses: actions/checkout@master
+    - name: Checkout repository
+      uses: actions/checkout@master
 
-    -name: Sync to S3
-     uses: jakejarvis/s3-sync-action@master
+    - name: Sync to S3
+      uses: jakejarvis/s3-sync-action@master
       with:
         args: --acl private --follow-symlinks --delete
       env:
