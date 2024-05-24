@@ -59,7 +59,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const counter = document.querySelector(".counter-number");
 async function updateCounter() {
     let response = await fetch(
-        "https://rkz37nngkb3f3wowo5xfl7syau0fnxsi.lambda-url.us-east-1.on.aws/"
+        "https://fnmx5kyrht2x7iyvobdohwizza0ovjma.lambda-url.us-east-1.on.aws/"
     );
     let data = await response.json();
     counter.innerHTML = `👀 Views: ${data}`;
