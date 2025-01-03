@@ -1,18 +1,41 @@
-resource "aws_lambda_function" "view_lambda" {
-    filename = data.archive_file.zip_func.output_path
-    function_name = "view_lambda"
-    role = aws_iam_role.iam_for_lambda.arn
-    handler = "lambda_func.lambda_handler"
-    runtime = "python3.8"
-    source_code_hash = data.archive_file.zip_func.output_base64sha256
-}
-
 # Archive a file to be used with Lambda using consistent file mode
 data "archive_file" "zip_func" {
   type             = "zip"
   source_file      = "${path.module}/lambda/lambda_func.py"
   output_file_mode = "0666"
   output_path      = "${path.module}/lambda/lambda_func.zip"
+}
+
+resource "aws_iam_policy" "iam_policy_for_website" {
+  name        = "iam_policy_for_website"
+  path        = "/"
+  description = "AWS IAM Policy for managing the project role"
+
+  # Terraform's "jsonencode" function converts a
+  # Terraform expression result to valid JSON syntax.
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Action = [
+          "logs:CreateLogGroup",
+          "logs:CreateLogStream",
+          "logs:PutLogEvents"
+        ]
+        Effect   = "Allow"
+        Resource = "/aws/lambda/<lambda_name>"
+      },
+      {
+        Action = [
+          "dynamodb:UpdateItem",
+		      "dynamodb:GetItem",
+          "dynamodb:PutItem",
+        ]
+        Effect   = "Allow"
+        Resource : "arn:aws:dynamodb:*:*:table/cloudresume-table"
+      }
+    ]
+  })
 }
 
 resource "aws_iam_role" "iam_for_lambda" {
@@ -39,42 +62,18 @@ resource "aws_iam_role" "iam_for_lambda" {
   }
 }
 
-resource "aws_iam_policy" "iam_policy_for_website" {
-  name        = "iam_policy_for_website"
-  path        = "/"
-  description = "AWS IAM Policy for managing the project role"
-
-  # Terraform's "jsonencode" function converts a
-  # Terraform expression result to valid JSON syntax.
-  policy = jsonencode({
-    Version = "2012-10-17"
-    Statement = [
-      {
-        Action = [
-          "logs:CreateLogGroup",
-          "logs:CreateLogStream",
-          "logs:PutLogEvents"
-        ]
-        Effect   = "Allow"
-        Resource = "*"
-      },
-      {
-        Action = [
-          "dynamodb:UpdateItem",
-		  "dynamodb:GetItem",
-          "dynamodb:PutItem",
-        ]
-        Effect   = "Allow"
-        Resource : "arn:aws:dynamodb:*:*:table/cloudresume-table"
-      }
-    ]
-  })
-}
-
 resource "aws_iam_policy_attachment" "attach_iam" {
   name = "attatch_iam"
   roles = [aws_iam_role.iam_for_lambda.name]
   policy_arn = aws_iam_policy.iam_policy_for_website.arn
+}
+resource "aws_lambda_function" "view_lambda" {
+    filename = data.archive_file.zip_func.output_path
+    function_name = "view_lambda"
+    role = aws_iam_role.iam_for_lambda.arn
+    handler = "lambda_func.lambda_handler"
+    runtime = "python3.8"
+    source_code_hash = data.archive_file.zip_func.output_base64sha256
 }
 
 resource "aws_lambda_function_url" "lambda_url" {
