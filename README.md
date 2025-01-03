@@ -1,4 +1,6 @@
 # aws-cloud-resume-challenge
-### ⛅️ [oliviachoidev.com](https://oliviachoidev.com)
-Used Stack: Amazon S3, CloudFront, ACM, Route53, Lambda, DynamoDB
-![architecture diagram](./image/resumechallenge-architecture-diagram.jpg)
+### [oliviachoidev.com](https://oliviachoidev.com)
+⛅️ AWS: S3, Lambda, CloudFront, ACM, Route53, DynamoDB<br/>
+🔁 CI/CD: GitHub Action<br/>
+💻 IaC: Terraform
+![architecture diagram](./image/resumechallenge-architecture-diagram.png)
