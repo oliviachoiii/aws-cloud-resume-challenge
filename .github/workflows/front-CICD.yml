@@ -24,7 +24,7 @@ jobs:
           AWS_REGION: "us-east-1"
           SOURCE_DIR: "website"
 
-      - name: Verify deployment with Project Pulse
+      - name: Verify deployment with Health Checker Pulse
         run: |
           curl \
             --fail \
